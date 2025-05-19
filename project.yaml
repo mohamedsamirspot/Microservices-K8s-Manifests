@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: microservices
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  description: Microservices
+  destinations:
+    - name: in-cluster
+      namespace: microservices
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - https://gitlab.com/microservices6813119/microservices-k8s-manifests.git
