@@ -1,0 +1,4 @@
+replicaCount: 1
+image:
+  repository: mohamedsamirebrahim/microservices-python-image
+  tag: 1
