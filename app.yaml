@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: microservices
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: mohamedsamirebrahim/microservices-python-image
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: microservices
   source:
