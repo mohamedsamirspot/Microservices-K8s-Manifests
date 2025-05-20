@@ -6,8 +6,8 @@ app:
     tag: 1
   resources:
     limits:
-      cpu: 2m
-      memory: 5Mi
+      cpu: 5m
+      memory: 20Mi
     requests:
-      cpu: 2m
-      memory: 5Mi
+      cpu: 5m
+      memory: 20Mi
