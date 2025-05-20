@@ -4,8 +4,8 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: microservices-app-hpa
   namespace: {{ .Values.namespace }}
-  # labels:
-  #   {{- include "microservices.labels" . | nindent 4 }}
+  labels:
+    {{- include "microservices.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
@@ -20,4 +20,4 @@ spec:
         target:
           type: Utilization
           averageUtilization: 80
-{{ - end -}}
+{{- end -}}
