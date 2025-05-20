@@ -5,7 +5,6 @@ app:
   image:
     repository: mohamedsamirebrahim/microservices-python-image
     tag: dev-15
-    name: mohamedsamirebrahim/microservices-python-image
   resources:
     limits:
       cpu: 5m
