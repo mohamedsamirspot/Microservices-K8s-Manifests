@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: app.image.repository
+    value: mohamedsamirebrahim/microservices-python-image
+    forcestring: true
+  - name: app.image.tag
+    value: dev-17
+    forcestring: true
