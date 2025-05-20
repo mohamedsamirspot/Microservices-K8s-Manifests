@@ -1,8 +1,0 @@
-helm:
-  parameters:
-  - name: image.name
-    value: mohamedsamirebrahim/microservices-python-image
-    forcestring: true
-  - name: image.tag
-    value: dev-12
-    forcestring: true
