@@ -12,6 +12,8 @@ app:
     requests:
       cpu: 5m
       memory: 20Mi
-
 hpa:
   enabled: false
+image:
+  tag: dev-12
+  name: mohamedsamirebrahim/microservices-python-image
