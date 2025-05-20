@@ -4,7 +4,7 @@ metadata:
   name: microservices-dev
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: mohamedsamirebrahim/microservices-python-image:dev-
+    argocd-image-updater.argoproj.io/image-list: mohamedsamirebrahim/microservices-python-image:dev-*
     argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: microservices
