@@ -4,7 +4,7 @@ app:
   replicaCount: 1
   image:
     repository: mohamedsamirebrahim/microservices-python-image
-    tag: dev-12
+    tag: dev-14
     name: mohamedsamirebrahim/microservices-python-image
   resources:
     limits:
