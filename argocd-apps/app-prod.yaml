@@ -4,7 +4,7 @@ metadata:
   name: microservices
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: mohamedsamirebrahim/microservices-python-image
+    argocd-image-updater.argoproj.io/image-list: mohamedsamirebrahim/microservices-python-image:prod-
     argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: microservices
@@ -14,10 +14,9 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values.yaml
+        - values-prod.yaml
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: microservices
   syncPolicy:
     automated:
       prune: true

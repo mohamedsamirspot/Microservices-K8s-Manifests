@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: microservices-app
-  namespace: microservices
+  namespace: {{ .Values.namespace }}
   labels:
   {{- include "microservices.labels"  .  | nindent 4}}
 spec:

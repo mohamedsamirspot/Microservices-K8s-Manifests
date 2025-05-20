@@ -1,0 +1,17 @@
+namespace: microservices-dev
+app:
+  env: dev
+  replicaCount: 1
+  image:
+    repository: mohamedsamirebrahim/microservices-python-image
+    tag: 1
+  resources:
+    limits:
+      cpu: 5m
+      memory: 20Mi
+    requests:
+      cpu: 5m
+      memory: 20Mi
+
+hpa:
+  enabled: false

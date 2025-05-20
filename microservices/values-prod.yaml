@@ -1,3 +1,4 @@
+namespace: microservices
 app:
   env: prod
   replicaCount: 1
@@ -11,3 +12,6 @@ app:
     requests:
       cpu: 5m
       memory: 20Mi
+
+hpa:
+  enabled: false
