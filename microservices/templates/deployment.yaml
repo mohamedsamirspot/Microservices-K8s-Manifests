@@ -21,4 +21,4 @@ spec:
           ports:
             - containerPort: 5000
           resources:
-            {{- toYaml .Values.app.resources | nindent 10}}
+            {{- toYaml .Values.app.resources | nindent 12}}
