@@ -1,4 +1,13 @@
-replicaCount: 1
-image:
-  repository: mohamedsamirebrahim/microservices-python-image
-  tag: 1
+app:
+  env: prod
+  replicaCount: 1
+  image:
+    repository: mohamedsamirebrahim/microservices-python-image
+    tag: 1
+  resources:
+    limits:
+      cpu: 2m
+      memory: 5Mi
+    requests:
+      cpu: 2m
+      memory: 5Mi

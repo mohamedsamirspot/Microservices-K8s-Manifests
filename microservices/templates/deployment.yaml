@@ -3,18 +3,22 @@ kind: Deployment
 metadata:
   name: microservices-app
   namespace: microservices
+  labels:
+  {{- include "microservices.labels"  .  | nindent 4}}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.app.replicaCount }}
   selector:
     matchLabels:
       app: microservices-app
   template:
     metadata:
       labels:
-        app: microservices-app
+        {{- include "microservices.labels"  .  | nindent 8}}
     spec:
       containers:
         - name: microservices-container
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
           ports:
             - containerPort: 5000
+          resources:
+            {{- toYaml .Values.app.resources | nindent 10}}

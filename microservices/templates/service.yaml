@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: microservices-service
   namespace: microservices
+  labels:
+  {{- include "microservices.labels"  .  | nindent 4}}
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: microservices-app
   ports:
