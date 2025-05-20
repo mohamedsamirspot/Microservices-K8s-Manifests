@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: micro=mohamedsamirebrahim/microservices-python-image
-    argocd-image-updater.argoproj.io/micro.allow-tags: 'regexp:^prod-\d+$'
+    argocd-image-updater.argoproj.io/micro.allow-tags: 'regexp:^main-\d+$'
     argocd-image-updater.argoproj.io/micro.update-strategy: newest-build
     # argocd-image-updater.argoproj.io/write-back-target: "helmvalues:values-prod.yaml" --> Not recommended
     argocd-image-updater.argoproj.io/micro.helm.image-name: app.image.repository                        
