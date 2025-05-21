@@ -12,5 +12,15 @@ app:
     requests:
       cpu: 5m
       memory: 20Mi
+  annotations:
+    reloader.stakater.com/auto: "true"
+
 hpa:
   enabled: false
+  
+configmap:
+  name: my-config
+  data:
+    APP_ENV: "dev"
+    LOG_LEVEL: "info"
+    FEATURE_FLAG: "true"

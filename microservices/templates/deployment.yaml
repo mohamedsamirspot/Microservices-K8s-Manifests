@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: microservices-app
   namespace: {{ .Values.namespace }}
+  annotations:
+    {{- range $key, $value := .Values.annotations }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
   labels:
   {{- include "microservices.labels"  .  | nindent 4}}
 spec:
@@ -20,5 +24,8 @@ spec:
           image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
           ports:
             - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.configmap.name }}
           resources:
             {{- toYaml .Values.app.resources | nindent 12}}
