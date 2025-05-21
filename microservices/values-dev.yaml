@@ -22,5 +22,5 @@ configmap:
   name: my-config
   data:
     APP_ENV: "dev"
-    LOG_LEVEL: "info"
+    LOG_LEVEL: "info-dev"
     FEATURE_FLAG: "true"
