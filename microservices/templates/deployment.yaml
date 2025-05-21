@@ -4,7 +4,9 @@ metadata:
   name: microservices-app
   namespace: {{ .Values.namespace }}
   annotations:
-    {{ .Values.app.annotations.reloader.stakater.com/auto }}
+    {{- range $key, $value := .Values.app.annotations }}
+    "{{ $key }}": "{{ $value }}"
+    {{- end }}
   labels:
   {{- include "microservices.labels"  .  | nindent 4}}
 spec:
