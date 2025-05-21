@@ -4,7 +4,7 @@ metadata:
   name: microservices-app
   namespace: {{ .Values.namespace }}
   annotations:
-    reloader.stakater.com/auto: "true"
+    {{ .Values.app.annotations.reloader.stakater.com/auto }}
   labels:
   {{- include "microservices.labels"  .  | nindent 4}}
 spec:
