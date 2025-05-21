@@ -4,7 +4,7 @@ metadata:
   name: microservices-app
   namespace: {{ .Values.namespace }}
   annotations:
-    {{- range $key, $value := .Values.annotations }}
+    {{- range $key, $value := .Values.app.annotations }}
     {{ $key }}: {{ $value | quote }}
     {{- end }}
   labels:
