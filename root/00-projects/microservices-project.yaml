@@ -15,4 +15,4 @@ spec:
     - namespace: microservices-dev
       server: https://kubernetes.default.svc
   sourceRepos:
-    - https://gitlab.com/microservices6813119/microservices-k8s-manifests.git
+    - https://github.com/mohamedsamirspot/Microservices-K8s-Manifests.git

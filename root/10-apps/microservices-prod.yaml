@@ -14,7 +14,7 @@ metadata:
 spec:
   project: microservices
   source:
-    repoURL: 'https://gitlab.com/microservices6813119/microservices-k8s-manifests.git'
+    repoURL: 'https://github.com/mohamedsamirspot/Microservices-K8s-Manifests.git'
     path: microservices
     targetRevision: HEAD
     helm:
