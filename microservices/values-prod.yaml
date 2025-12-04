@@ -1,4 +1,4 @@
-namespace: microservices
+namespace: microservices-prod
 app:
   env: prod
   replicaCount: 1
@@ -22,5 +22,5 @@ configmap:
   name: my-config
   data:
     APP_ENV: "prod"
-    LOG_LEVEL: "info"
+    LOG_LEVEL: "info-prod"
     FEATURE_FLAG: "true"
