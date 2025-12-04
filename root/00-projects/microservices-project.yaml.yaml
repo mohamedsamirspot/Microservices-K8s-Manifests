@@ -10,7 +10,9 @@ spec:
   description: Microservices
   destinations:
     - name: in-cluster
-      namespace: microservices
+      namespace: microservices-prod
+      server: https://kubernetes.default.svc
+    - namespace: microservices-dev
       server: https://kubernetes.default.svc
   sourceRepos:
     - https://gitlab.com/microservices6813119/microservices-k8s-manifests.git
