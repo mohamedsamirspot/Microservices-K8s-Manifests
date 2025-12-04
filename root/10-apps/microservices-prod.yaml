@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microservices
+  name: microservices-prod
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: micro=mohamedsamirebrahim/microservices-python-image
@@ -22,7 +22,7 @@ spec:
         - values-prod.yaml
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: microservices
+    namespace: microservices-prod
   syncPolicy:
     automated:
       prune: true
