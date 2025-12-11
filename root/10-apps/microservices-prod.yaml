@@ -11,10 +11,6 @@ metadata:
     argocd-image-updater.argoproj.io/micro.helm.image-name: app.image.repository                        
     argocd-image-updater.argoproj.io/micro.helm.image-tag: app.image.tag   
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
-    argocd-image-updater.argoproj.io/write-back-target: branch:main
-    argocd-image-updater.argoproj.io/git-pr-branch: "argocd-image-update/{{ .Image }}-{{ .NewTag }}"
-    argocd-image-updater.argoproj.io/git-pr-title: "Update microservice image to {{ .NewTag }}"
-    argocd-image-updater.argoproj.io/git-pr-body: "This PR updates the microservice image to {{ .NewTag }} for production deployment."
 spec:
   project: microservices
   source:

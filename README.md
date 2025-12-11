@@ -1,4 +1,5 @@
-From the arogcd side we have the argocd image updater installed and tracking this repo and the container registery and also stakater reloader that keeps tracking the configmaps and secrets to restart the deployments accordingly
+- Note: This setup (dev,..., prod) all in the same repo with direct commits from argocd-image-updater are fine if your app repo is using the gitflow branching strategy. If your app repo uses feature branching strategy you need here to separate the the envs to different branches or different repos just to add the pr mechanism to specific repos or branches to just for example let the push to the main branch in the app to go directly to the dev env but not others without a pr.
+- From the argocd side we have the argocd-image-updater installed and tracking this repo and the container registery and also stakater reloader that keeps tracking the configmaps and secrets to restart the deployments accordingly
 ## How to install the root app
 - Disclaimer: This has to be done only once during the lifetime of the cluster. So basically this is the very initial bootstrapping that should never have to be repeated.
 - You need to create it manually through the gui or terraform (root-app-of-apps.yaml)
