@@ -1,5 +1,7 @@
 From the arogcd side we have the argocd image updater installed and tracking this repo and the container registery and also stakater reloader that keeps tracking the configmaps and secrets to restart the deployments accordingly
-## The only thing that you need to create manually or through terraform is the root-app-of-apps.yaml
+## How to install the root app
+- Disclaimer: This has to be done only once during the lifetime of the cluster. So basically this is the very initial bootstrapping that should never have to be repeated.
+- You need to create it manually through the gui or terraform (root-app-of-apps.yaml)
 ## Argocd Image Updater Installation (in the cluster that contains argocd installed)
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
