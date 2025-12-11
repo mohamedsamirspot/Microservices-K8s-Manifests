@@ -10,7 +10,7 @@ metadata:
     # argocd-image-updater.argoproj.io/write-back-target: "helmvalues:values-dev.yaml" --> Not recommended
     argocd-image-updater.argoproj.io/micro.helm.image-name: app.image.repository                        
     argocd-image-updater.argoproj.io/micro.helm.image-tag: app.image.tag   
-    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
 spec:
   project: microservices
   source:
@@ -29,3 +29,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+
