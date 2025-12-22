@@ -8,8 +8,8 @@ metadata:
     argocd-image-updater.argoproj.io/micro.allow-tags: 'regexp:^dev-\d+$'
     argocd-image-updater.argoproj.io/micro.update-strategy: newest-build
     # argocd-image-updater.argoproj.io/write-back-target: "helmvalues:values-dev.yaml" --> Not recommended
-    argocd-image-updater.argoproj.io/micro.helm.image-name: app.image.repository                        
-    argocd-image-updater.argoproj.io/micro.helm.image-tag: app.image.tag   
+    argocd-image-updater.argoproj.io/micro.helm.image-name: app.image.repository
+    argocd-image-updater.argoproj.io/micro.helm.image-tag: app.image.tag
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
 spec:
   project: microservices
@@ -29,4 +29,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-

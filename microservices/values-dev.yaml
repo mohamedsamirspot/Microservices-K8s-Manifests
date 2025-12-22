@@ -17,7 +17,7 @@ app:
 
 hpa:
   enabled: false
-  
+
 configmap:
   name: my-config
   data:
