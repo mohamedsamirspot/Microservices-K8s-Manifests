@@ -16,3 +16,16 @@ spec:
       server: https://kubernetes.default.svc
   sourceRepos:
     - https://github.com/mohamedsamirspot/Microservices-K8s-Manifests.git
+
+  # Usually beneficial with the kube-downscaler
+  syncWindows:
+    - kind: deny
+      # “Every weekday at 9 AM, block all application syncs for 8 hours.”
+      schedule: "0 9 * * 1-5"   # Mon–Fri at 09:00
+      duration: 8h              # Deny for 8 hours
+      timeZone: Africa/Cairo
+      manualSync: true
+      applications:
+        - "*"
+      clusters:
+        - https://kubernetes.default.svc
