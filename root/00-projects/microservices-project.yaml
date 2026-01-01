@@ -25,19 +25,5 @@ spec:
       manualSync: true
       applications:
         - "*"
-      namespaces:
-        - microservices-prod
-      clusters:
-        - https://kubernetes.default.svc
-
-    # Allow dev always
-    - kind: allow
-      schedule: "* * * * *"
-      duration: 24h
-      timeZone: Africa/Cairo
-      applications:
-        - "*"
-      namespaces:
-        - microservices-dev
       clusters:
         - https://kubernetes.default.svc
