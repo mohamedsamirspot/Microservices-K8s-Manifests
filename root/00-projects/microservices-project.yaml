@@ -16,7 +16,6 @@ spec:
       server: https://kubernetes.default.svc
   sourceRepos:
     - https://github.com/mohamedsamirspot/Microservices-K8s-Manifests.git
-
   # Usually beneficial with the kube-downscaler
   syncWindows:
     - kind: deny
