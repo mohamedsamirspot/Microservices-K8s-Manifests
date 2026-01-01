@@ -24,6 +24,6 @@ spec:
       timeZone: Africa/Cairo
       manualSync: true
       applications:
-        - "microservices-prod"
+        - "*"
       clusters:
         - https://kubernetes.default.svc
