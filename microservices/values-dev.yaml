@@ -24,3 +24,5 @@ configmap:
     APP_ENV: "dev"
     LOG_LEVEL: "info-dev"
     FEATURE_FLAG: "true"
+secret:
+  name: my-secret

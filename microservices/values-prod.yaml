@@ -24,3 +24,5 @@ configmap:
     APP_ENV: "prod"
     LOG_LEVEL: "info-prod"
     FEATURE_FLAG: "true"
+secret:
+  name: my-secret
