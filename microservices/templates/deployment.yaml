@@ -22,8 +22,10 @@ spec:
       # If no securityContext is set in Kubernetes, then: Kubernetes runs the container as whatever user is defined in the image.
       # Best Practice: ✔ Set USER in the Dockerfile and ✔ enforce it with Kubernetes securityContext
       securityContext:
-        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
         fsGroup: 1001
+        runAsNonRoot: true
       containers:
         - name: microservices-container
           image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
@@ -36,3 +38,4 @@ spec:
                 name: {{ .Values.secret.name }}
           resources:
             {{- toYaml .Values.app.resources | nindent 12}}
+
