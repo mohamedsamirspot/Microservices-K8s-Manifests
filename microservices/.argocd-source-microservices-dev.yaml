@@ -4,5 +4,5 @@ helm:
     value: mohamedsamirebrahim/microservices-python-image
     forcestring: true
   - name: app.image.tag
-    value: dev-69
+    value: dev-72
     forcestring: true
