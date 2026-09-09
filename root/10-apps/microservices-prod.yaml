@@ -3,20 +3,12 @@ kind: Application
 metadata:
   name: microservices-prod
   namespace: argocd
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: micro=mohamedsamirebrahim/microservices-python-image
-    argocd-image-updater.argoproj.io/micro.allow-tags: 'regexp:^v\d+\.\d+\.\d+$'
-    argocd-image-updater.argoproj.io/micro.update-strategy: newest-build
-    # argocd-image-updater.argoproj.io/write-back-target: "helmvalues:values-prod.yaml" --> Not recommended
-    argocd-image-updater.argoproj.io/micro.helm.image-name: app.image.repository
-    argocd-image-updater.argoproj.io/micro.helm.image-tag: app.image.tag
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
 spec:
   project: microservices
   source:
-    repoURL: 'https://github.com/mohamedsamirspot/Microservices-K8s-Manifests.git'
-    path: microservices
-    targetRevision: HEAD
+    repoURL: ghcr.io/mohamedsamirspot
+    chart: microservices-app
+    targetRevision: 0.1.0
     helm:
       valueFiles:
         - values-prod.yaml
