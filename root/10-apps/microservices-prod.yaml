@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: ghcr.io/mohamedsamirspot
     chart: microservices-app
-    targetRevision: 0.9.0-feature-package-app-helm-chart
+    targetRevision: 2.0.0
     helm:
       valueFiles:
         - values-prod.yaml
